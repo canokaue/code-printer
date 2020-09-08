@@ -1,6 +1,6 @@
 let codes = `
 /*
- * Forked from tuobaye0711/code-printer
+ * Forked from tuobaye0711's code-printer
  * Creative inspiration comes from codepen author Jake Albaugh
  *
  * The project is a simple dynamic code generator distributed exclusively through
@@ -76,7 +76,7 @@ var title = document.createElement("h1");
 title.id = "title";
 
 /* Well, give a name */
-title.innerHTML = "<a>this is<em>perma-printer</em>Project address</a>";
+title.innerHTML = "<a>this is <em>perma-printer</em> Project address</a>";
 
 /* Do a little action */
 title.childNodes[0].href = "https://github.com/canokaue/perma-printer";

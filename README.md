@@ -1,17 +1,54 @@
-# code-printer
-print and show the animation of your code | 打印并展示你的代码特效
+# perma-printer
+print and show the animation of your code
 
-[Demo](http://tuobaye.com/demo/code-printer)
+## Install
 
-***
+<img align="center" src="https://gitlab.com/cervoneluca/openbits/-/raw/master/assets/logo-black.png" height="50px" alt="OpenBits logo" title="OpenBits Logo"> This package is only served through OpenBits. 
 
-使用说明：
+To install OpenBits run: 
 
-您可以fork过去直接修改，也可以按照如下步骤操作
-
-``` bash
-git clone https://github.com/tuobaye0711/code-printer.git
+```shell
+npm install openbits -g
 ```
+
+Then login into openbits by following these <a href="https://www.npmjs.com/package/openbits" target="_blank">instructions</a>.
+
+When OpenBits is set up, then install perma-printer as following: 
+
+```shell
+openbits install perma-printer
+```
+
+## Usage
+
+Import the package: 
+
+```Javascript
+import batRandom from 'batrandom';
+```
+
+Create a bat-thing by doing the following:
+
+```javascript
+const batThing = batRandom('noun');
+console.log(batThing);
+
+// will print bat-something
+
+const batThing = batRandom('adjective');
+console.log(batThing);
+
+// will print bat-somehow
+```
+
+
+
+## Contribute
+
+If you really want to contribute to this project, you need to tell me the answer to all questions. 
+
+
+
 
 安装依赖文件
 ``` bash
