@@ -1,5 +1,5 @@
 {
-  "name": "code-printer",
+  "name": "perma-printer",
   "version": "1.0.0",
   "description": "print and show the animation of your code",
   "main": "app.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tuobaye0711/code-printer.git"
+    "url": "git+https://github.com/canokaue/perma-printer.git"
   },
   "keywords": [
     "resume"
@@ -18,9 +18,9 @@
   "author": "zhleven",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tuobaye0711/code-printer/issues"
+    "url": "https://github.com/canokaue/perma-printer/issues"
   },
-  "homepage": "https://github.com/tuobaye0711/code-printer#readme",
+  "homepage": "https://github.com/canokaue/perma-printer#readme",
   "devDependencies": {
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.0"
