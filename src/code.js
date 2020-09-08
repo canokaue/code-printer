@@ -1,17 +1,18 @@
 let codes = `
-/* 
- * 创意灵感来源于codepen作者Jake Albaugh 
+/*
+ * Forked from tuobaye0711/code-printer
+ * Creative inspiration comes from codepen author Jake Albaugh
  *
- * 项目名code-printer，已在github上开源
- *   
- * 与同类作品不同的是，本项目在支持CSS特效展示的同时，还支持部分JS操作
+ * The project is a simple dynamic code generator distributed exclusively through
+ * openbits.world in the arweave permaweb
+ * Different from similar works, this project supports some JS operations while supporting CSS special effects display
  */
 
 * {
     -webkit-transition: all 1s;
 }
                    
- /* 首先，我先画一张背景板 */
+ /* First, I first draw a background board */
  
 body {
     background-color: #3D5F8F;
@@ -21,8 +22,7 @@ body {
     -webkit-font-smoothing: subpixel-antialiased;
 }
 
-/* 然后，准备我们的“打印纸” */
- 
+/* Then, prepare our "printing paper" */ 
 #my-code {
     overflow: auto;
     position: fixed; width: 70%;
@@ -39,10 +39,10 @@ body {
         0px 4px 0px 2px rgba(0,0,0,0.1);
 }
 
-/* 
- * 现在还很丑，我们把代码高亮一下就好看了
- *  
- * 就用我平时IDE里用的Monokai主题给我们的代码配色吧
+/*
+ * It's still ugly now, we can just highlight the code
+ *
+ * Just use the Monokai theme I usually use in the IDE to color our code
  */
 
 pre em:not(.comment) { font-style: normal; }
@@ -62,45 +62,45 @@ pre em:not(.comment) { font-style: normal; }
 .method        { color: #f9245c; }
 .run-command   { color: #ae81ff; }
 
-/* 
- * 是不是很漂亮？             
+/*
+ * Isn't it beautiful?
  *
- * 光打印CSS还是有点无趣，不如来点JS代码？          
+ * Just printing CSS is still a bit boring, why don't you have some JS code?
  *
- * 走起！               
+ * let's go!
  */
 ~\`
 
-/* 我要操作DOM，给这个页面加个标题 */
+/* I want to manipulate the DOM and add a title to this page */
 var title = document.createElement("h1");
 title.id = "title";
 
-/* 恩，起个名字 */
-title.innerHTML = "<a>这是<em>code-printer</em>的项目地址</a>";
+/* Well, give a name */
+title.innerHTML = "<a>this is<em>perma-printer</em>Project address</a>";
 
-/* 做点小动作 */
-title.childNodes[0].href = "https://github.com/tuobaye0711/code-printer";
+/* Do a little action */
+title.childNodes[0].href = "https://github.com/canokaue/perma-printer";
 title.childNodes[0].target = "view_window";
 
-/* 最后把他添加到DOM里面 */
+/* Finally add it to the DOM */
 document.body.appendChild(title);
              
-/* 
- * 如果我们的JS边打印边执行的话，我们的控制台肯定被报错刷屏了
- * 
- * 因此我们使用一个波浪号来控制代码执行
- * 
- * 听我号令，执行！
+/*
+ * If our JS is executed while printing, our console must be reported an error to refresh the screen
+ *
+ * So we use a tilde to control code execution
+ *
+ * Follow my orders and execute!
  */
 
- ~                 
+ ~
 
 /*
- * 怎么样？ 
- * 
- * 标题已经添加到DOM里了，但是有点丑
- * 
- * 再换成CSS代码，修饰一下吧
+ * how about it?
+ *
+ * The title has been added to the DOM, but it is a bit ugly
+ *
+ * Change to CSS code again and modify it
  */
 \`
 
@@ -127,12 +127,12 @@ document.body.appendChild(title);
 }
 
 /*
- * 偷偷地告诉你，点击文字可以直接跳转到项目地址哦
+ * Secretly tell you, click on the text to jump directly to the project address
  *
- * 希望好心的你能star&fork一下哦
+ * I hope you can star&fork
  */
 
-/* 调整一下布局 */
+/* Adjust the layout */
 
 #my-code { left: 20px; width: calc(50% - 30px); }
 
@@ -150,49 +150,25 @@ document.body.appendChild(title);
     0px 4px 0px 2px rgba(0,0,0,0.1);
 }
 ~\`
-/* 接下来展示一个拓拔野的简历，这部分还得用JS来实现 */
+/* Next, I will open openbits.world */
 
-/* 首先，创建一个iframe */
+/* First, create an iframe */
 var iframe = document.createElement("iframe");
+/* Attach index file */
+iframe.src = "render/index.html";
 
-/* 把拓拔野的简历附上 */
-iframe.src = "resume/lndex.html";
-
-/* 附上ID */
+/* Attach ID */
 iframe.id = "iframe"
 
-/* 加到DOM上 */
+/* Add to DOM */
 document.body.appendChild(iframe); ~
 \`
-/* 出现吧 */
+/* Come on */
 #iframe { left: calc(50% + 10px); }
                                              
-/*
- * 这就是我高中时期喜欢的书籍
- *   
- * 不知道在座的有没有人看过呢？
- *                   
- * 现在已经一本也找不到了
- *
- * 心中只剩下怀念
- *
- * 我的个人域名tuobaye.com就是搜神记中主角名字
- */
 ~\`
-document.getElementById("iframe").src = "resume/index.html"; ~\`
+document.getElementById("iframe").src = "render/index.html"; ~\`
 
-/*
- * 这是拓拔野
- *                        
- * 我为他做了一份简历当做Demo
- *         
- * 您可以fork我的项目，把这个地方修改成自己的简历
- *
- * 就是一份炫酷的自我介绍啦    
- *
- * 就先到这儿吧，感谢您的耐心观看
- */
- 
 `;
 
 
